@@ -28,8 +28,14 @@ Le projet est organisé en trois étapes progressives :
 Le projet utilise un environnement virtuel pour isoler les dépendances.
 
 ```bash
-# Activer l'environnement virtuel
-source /home/vboxuser/sae24_env/bin/activate
+# 1. Créer l'environnement virtuel
+python3 -m venv venv
+
+# 2. Activer l'environnement
+source venv/bin/activate
+
+# 3. Installer les dépendances
+pip install -r requirements.txt
 ```
 
 ### 3. Exécution des scripts
@@ -38,13 +44,13 @@ Tous les scripts manipulant le réseau doivent être lancés avec `sudo` en util
 **Forge de paquets (Étape 1) :**
 ```bash
 cd step1_scapy_basics
-sudo /home/vboxuser/sae24_env/bin/python basic_forge.py
+sudo venv/bin/python basic_forge.py
 ```
 
 **Exercices de manipulation (Étape 3) :**
 ```bash
 cd step3_python_manipulation
-sudo /home/vboxuser/sae24_env/bin/python exercises.py
+sudo venv/bin/python exercises.py
 ```
 
 ## 🛠️ Fonctionnement Technique
