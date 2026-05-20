@@ -2,62 +2,27 @@
 
 Ce projet s'inscrit dans le cadre de la **SAE 204** et se concentre sur la manipulation de paquets réseau, l'analyse de trafic IPv6 et le parsing de protocoles classiques (FTP, Telnet, HTTP) en utilisant la bibliothèque Python **Scapy**.
 
-## 🎯 Objectifs du Projet
-L'objectif est de comprendre le fonctionnement des couches réseau en pratiquant :
-- La **forge de paquets** personnalisés.
-- L'**analyse de captures** réseau (PCAP).
-- L'**automatisation** du traitement de données réseau via Python.
+## 🚀 Démarrage Rapide
+
+Pour lancer le projet, suivez ces trois étapes :
+
+1. **Installation** : Suivez le [Guide d'Installation détaillé](GUIDE_INSTALLATION.md) pour configurer votre environnement.
+2. **Accès** : Placez-vous dans le dossier du script souhaité.
+3. **Lancement** : Exécutez le script avec les privilèges root en utilisant le Python de l'environnement virtuel :
+   ```bash
+   sudo venv/bin/python nom_du_script.py
+   ```
 
 ## 📁 Structure du Projet
 
-Le projet est organisé en trois étapes progressives :
+- **`step1_scapy_basics/`** : Forge de paquets ICMP personnalisés.
+- **`step2_ping6_analysis/`** : Analyse du protocole IPv6.
+- **`step3_python_manipulation/`** : Parsing de logs et extraction de données.
+- **`challenges_ftp_telnet_http/`** : Analyse de captures de protocoles non chiffrés.
 
-- **`step1_scapy_basics/`** : Introduction à Scapy. Création et forge de paquets ICMP (Ping) personnalisés pour tester la connectivité et la structure des couches.
-- **`step2_ping6_analysis/`** : Analyse spécifique du protocole IPv6. Étude des mécanismes de résolution et de communication IPv6.
-- **`step3_python_manipulation/`** : Exercices de manipulation de fichiers et de chaînes de caractères, appliqués au parsing de logs de protocoles (extraction d'utilisateurs et de mots de passe).
-- **`challenges_ftp_telnet_http/`** : Résultats des challenges de capture et d'analyse de protocoles non chiffrés.
+## 🛠️ Documentation Complète
 
-## 🚀 Guide de Lancement
-
-### 1. Prérequis
-- **Système :** Linux (recommandé pour l'accès aux sockets brutes).
-- **Privilèges :** Accès `sudo` (indispensable pour envoyer/capturer des paquets avec Scapy).
-- **Python :** Version 3.11+.
-
-### 2. Installation et Environnement
-Le projet utilise un environnement virtuel pour isoler les dépendances.
-
-```bash
-# 1. Créer l'environnement virtuel
-python3 -m venv venv
-
-# 2. Activer l'environnement
-source venv/bin/activate
-
-# 3. Installer les dépendances
-pip install -r requirements.txt
-```
-
-### 3. Exécution des scripts
-Tous les scripts manipulant le réseau doivent être lancés avec `sudo` en utilisant le chemin vers l'interpréteur de l'environnement virtuel.
-
-**Forge de paquets (Étape 1) :**
-```bash
-cd step1_scapy_basics
-sudo venv/bin/python basic_forge.py
-```
-
-**Exercices de manipulation (Étape 3) :**
-```bash
-cd step3_python_manipulation
-sudo venv/bin/python exercises.py
-```
-
-## 🛠️ Fonctionnement Technique
-Le projet repose sur **Scapy**, qui permet de :
-1. **Empiler les couches :** `packet = IP(dst="...") / ICMP() / "Payload"`
-2. **Inspecter les paquets :** Utilisation de `.show()` pour visualiser la structure détaillée.
-3. **Analyser le trafic :** Lecture de fichiers `.pcap` pour extraire des informations sensibles (comme les identifiants FTP/Telnet).
+Pour toutes les instructions détaillées, les prérequis système et la résolution des problèmes, consultez le **[GUIDE_INSTALLATION.md](./GUIDE_INSTALLATION.md)**.
 
 ---
-*Livrables : Le rapport final se trouve dans le dossier `deliverables/FINAL_REPORT.md`.*
+*Livrables : Le rapport final se trouve dans `deliverables/FINAL_REPORT.md`.*
