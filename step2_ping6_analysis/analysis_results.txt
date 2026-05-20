@@ -1,0 +1,6 @@
+--- Neighbor Solicitation ---
+MAC Source: 64:00:6a:6a:c4:01
+MAC Dest: 33:33:ff:00:00:01
+IPv6 Source: 2001:660:6701:30cc:84fc:c335:133c:f204
+IPv6 Dest: ff02::1:ff00:1
+Target IPv6: 2001:660:6701:30cc::1
